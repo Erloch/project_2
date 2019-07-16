@@ -1,5 +1,13 @@
 // Execute this code when the DOM has fully loaded.
+function audio(){
+  // var x = document.getElementById("myaudio");
+  // x.play();
+  var newAudio = new Audio("../Sound/test.mp3");
+  newAudio.play();
+}
 $(document).ready(function() {
+  audio();
+ 
     // VARIABLE DECLARATION
     // ===================================================================
   

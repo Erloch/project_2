@@ -1,0 +1,17 @@
+body {
+    background-image: url("https://media2.giphy.com/media/bPiLQFMPRIEX6/giphy.gif?cid=790b76115d2e0d21636e594a6707bf02&rid=giphy.gif");
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    text-align: center;
+    font-size: 100px;
+}
+
+.creators{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    bottom: 0%;
+    position: fixed;
+
+
+}

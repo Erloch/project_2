@@ -1,0 +1,14 @@
+.container{
+    border-block: width 50%;
+  }
+.creater{
+      border: 200px, 300px;
+  }
+  .title, .subTitle, .points{
+      text-align:center;
+  }
+  .form-control{
+      width: 30%;
+      text-align:center;
+     margin-left: 35%;
+  }

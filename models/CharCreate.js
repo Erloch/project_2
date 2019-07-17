@@ -1,11 +1,14 @@
 module.exports = function(sequelize, DataTypes) {
-  var CharCreate = sequelize.define("CharCreate", {
+  var Character = sequelize.define("Character", {
     char_name: DataTypes.STRING,
     img: DataTypes.STRING,
-    health:DataTypes.INT,
-    def:DataTypes.INT,
-    stren:DataTypes.INT,
-    xp:DataTypes.INT
+    health: DataTypes.INTEGER,
+    def: DataTypes.INTEGER,
+    stren: DataTypes.INTEGER,
+    xp: DataTypes.INTEGER
   });
-  return CharCreate;
-};
+  return Character
+  // Character.associate = function(){
+  //   // look at authors join sequalize
+  // }
+}

@@ -1,68 +1,43 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Assets/CSS/homestyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<script>
+        function openWin() {
+          window.open("homePg.html");
+        }
+        </script>
+        </head>
+        <body>
+        
+        <form>
+          <input type="button" value="Start the game, if you dare" onclick="openWin()">
+          <audio id="bflat" src="Assets/Sound/8bitsong.mp3"></audio>
+        </form>
 
-	<head>
-		<meta charset="UTF-8">
-		<title>Battle Game</title>
-		<!-- Google Fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet" type="text/css">
-		<!-- CSS -->
-		<link rel="stylesheet" href="Assets/CSS/style.css">
-		<!-- jQuery -->
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<!-- Game Logic -->
-		<script type="text/javascript" src="Assets/JS/rpg.js"></script>
-		<script>
-		
-		</script>
-		
-	</head>
+<body>
 
-	<body>
-			
+    <p> Micro BitBattle </p>
 
-		<div class="main-section-title">BattleBITs</div>
-		<div id="main-game-section">
-			<!-- Where the characters are initially available to be selected. -->
-			<div id="characters-section">
-				<div class="section-title">Select Your Character</div>
-				
-				
-			</div>
-			
-			<!-- Section for our selected character. -->
-			<div id="selected-character-section">
-				<div class="section-title">Your Character
-						
-				</div>
-				
-				
-				
-				<!-- Where our selected character will appear. -->
-				<div id="selected-character"></div>
-			</div>
-
-			<!-- Where our enemies available to attack will appear. -->
-			<div id="available-to-attack-section">
-				<div class="section-title">Enemies Available To Attack</div>
-			</div>
-
-			<div class="section-title">Fight Section</div>
-			<div id="fight-section">
-				<button id="attack-button">Attack</button>
-			</div>
-
-			<div id="action">
-				<div class="character-section">
-					<div class="section-title">Defender</div>
-					<!-- Where our defender will appear. -->
-					<div id="defender"></div>
-				</div>
-			</div>
-
-		</div>
-		<!-- Area for game messages. -->
-		<div id="game-message"></div>
-	</body>
-
+    <div class = "creators">
+        <p>
+            Holt Galbraith, Rob Kowalski, Erich Bernhardt, Christopher Torres
+    </p></div>
+    <script>
+      function openWin() {
+        window.open("homePg.html");
+         var audio = document.getElementById('bflat')
+         function playAudio(){
+           audio.play();
+         }
+         playAudio();
+        }
+      </script> 
+</body>
 </html>

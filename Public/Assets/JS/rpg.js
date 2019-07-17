@@ -1,5 +1,13 @@
 // Execute this code when the DOM has fully loaded.
+function audio(){
+  // var x = document.getElementById("myaudio");
+  // x.play();
+  var newAudio = new Audio("../Sound/test.mp3");
+  newAudio.play();
+}
 $(document).ready(function() {
+  audio();
+ 
     // VARIABLE DECLARATION
     // ===================================================================
   
@@ -8,7 +16,7 @@ $(document).ready(function() {
     var characters = {
       "Mario": {
         name: "Mario",
-        health: 120,
+        health: 100,
         attack: 8,
         imageUrl: "Images/mario.gif",
         enemyAttackBack: 15
@@ -22,18 +30,37 @@ $(document).ready(function() {
       },
       "Link": {
         name: "Link",
-        health: 150,
+        health: 100,
         attack: 8,
         imageUrl: "Images/link.gif",
         enemyAttackBack: 20
       },
       "Megaman": {
         name: "Megaman",
-        health: 180,
+        health: 100,
         attack: 7,
         imageUrl: "Images/megaman.gif",
         enemyAttackBack: 25
+      },
+      "Pacman": {
+        name: "Pacman",
+        health: 100,
+        attack: 8,
+        imageUrl: "Images/pacman.gif"
+      },
+      "Pikachu": {
+        name: "Pikachu",
+        health: 100,
+        attack: 9,
+        imageUrl: "Images/pikachu.gif"
+      },
+      "Charizard": {
+        name: "Charizard",
+        health: 100,
+        attack: 9,
+        imageUrl: "Images/charzard.gif"
       }
+
     };
   
     // Will be populated when the player selects a character.

@@ -1,13 +1,5 @@
 // Execute this code when the DOM has fully loaded.
-function audio(){
-  // var x = document.getElementById("myaudio");
-  // x.play();
-  var newAudio = new Audio("../Sound/test.mp3");
-  newAudio.play();
-}
-$(document).ready(function() {
-  audio();
- 
+
     // VARIABLE DECLARATION
     // ===================================================================
   
@@ -187,10 +179,18 @@ $(document).ready(function() {
         clearMessage();
       }
     });
-  
+
+
     // When you click the attack button, run the following game logic...
     $("#attack-button").on("click", function() {
-      // If there is a defender, combat will occur.
+      var exp_sound = document.getElementById("attack-button2")
+      console.log("in attack button click 1: ", exp_sound);
+      
+      function playAudio() {
+        exp_sound.play();
+      }
+      playAudio();
+      // If there is a defender, combat will occ
       if ($("#defender").children().length !== 0) {
         // Creates messages for our attack and our opponents counter attack.
         var attackMessage = "You attacked " + defender.name + " for " + attacker.attack * turnCounter + " damage.";
@@ -251,5 +251,89 @@ $(document).ready(function() {
         renderMessage("No enemy here.");
       }
     });
-  });
+
+
+///  SUPER ATTACK BUTTON
+
+$("#super-attack").on("click", function() {
+  var laser_sound = document.getElementById("laser-attack")
+  console.log("in attack button click 2: ", laser_sound);
+  
+  function playAudio() {
+    laser_sound.play();
+  }
+  playAudio();
+  // If there is a defender, combat will occ
+  if ($("#defender").children().length !== 0) {
+    // Creates messages for our attack and our opponents counter attack.
+    var attackMessage = "You attacked " + defender.name + " for " + attacker.attack * turnCounter + " damage.";
+    var counterAttackMessage = defender.name + " attacked you back for " + defender.enemyAttackBack + " damage.";
+    clearMessage();
+
+    // Reduce defender's health by your attack value.
+    defender.health -= attacker.attack * turnCounter;
+
+    // If the enemy still has health..
+    if (defender.health > 0) {
+      // Render the enemy's updated character card.
+      updateCharacter(defender, "#defender");
+
+      // Render the combat messages.
+      renderMessage(attackMessage);
+      renderMessage(counterAttackMessage);
+
+      // Reduce your health by the opponent's attack value.
+      attacker.health -= defender.enemyAttackBack;
+
+      // Render the player's updated character card.
+      updateCharacter(attacker, "#selected-character");
+
+      // If you have less than zero health the game ends.
+      // We call the restartGame function to allow the user to restart the game and play again.
+      if (attacker.health <= 0) {
+        clearMessage();
+        restartGame("You have been defeated...GAME OVER!!!");
+        $("super-attack").off("click");
+      }
+    }
+    else {
+      // If the enemy has less than zero health they are defeated.
+      // Remove your opponent's character card.
+      $("#defender").empty();
+
+      var gameStateMessage = "You have defeated " + defender.name + ", you can choose to fight another enemy.";
+      renderMessage(gameStateMessage);
+
+      // Increment your kill count.
+      killCount++;
+
+      // If you have killed all of your opponents you win.
+      // Call the restartGame function to allow the user to restart the game and play again.
+      if (killCount >= combatants.length) {
+        clearMessage();
+        $("#super-attack").off("click");
+        restartGame("You Won!!!! GAME OVER!!!");
+      }
+    }
+    // Increment turn counter. This is used for determining how much damage the player does.
+    turnCounter++;
+  }
+  else {
+    // If there is no defender, render an error message.
+    clearMessage();
+    renderMessage("No enemy here.");
+  }
+});
+
+
+
+
+    
+
+
+      
+
+
+
+
   

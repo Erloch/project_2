@@ -4,7 +4,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    color: orange;
+    color: white;
   }
   
   
@@ -43,6 +43,7 @@ body {
     margin-top: 3px;
     margin-bottom: 3px;
   }
+  
   
   .character-name {
     text-align: center;

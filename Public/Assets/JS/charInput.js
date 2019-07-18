@@ -1,19 +1,25 @@
+
+console.log("this is loaded")
+
+
+
 $("#submit").on("click", function (event) {
     event.preventDefault();
     console.log("ive been clicked");
     var newChar = {
         charName: $("#charName").val().trim(),
-        
-        charH: $("#charH").parseInt().val(),
-        charD: $("#charD").parseInt().val(),
-        charS: $("#charS").parseInt().val()
+        charH: parseInt($("#charH").val()),
+        charD: parseInt($("#charD").val()),
+        charS: parseInt($("#charS").val())
     }
     console.log(newChar)
 
-    $.post("api/new", newChar)
-        .then(function(res){
-console.log(res)
-           
-        })
+    $.ajax({
+        url: "/api/character",
+        type: "POST",
+        data: newChar
+    }).then(function (res) {
+        console.log(res, "Data Posted")
+    })
 })
 

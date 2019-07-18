@@ -1,6 +1,18 @@
+<<<<<<< HEAD
 body{
     background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ccd831dd-b96c-4a03-a8a5-e0760700c024/dbsi01n-241f1ad6-de7f-425a-8297-4af2ae241319.png/v1/fill/w_1192,h_670,q_70,strp/8_bit_adventure_anthology_background___shadowgate_by_polymental69_dbsi01n-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcL2NjZDgzMWRkLWI5NmMtNGEwMy1hOGE1LWUwNzYwNzAwYzAyNFwvZGJzaTAxbi0yNDFmMWFkNi1kZTdmLTQyNWEtODI5Ny00YWYyYWUyNDEzMTkucG5nIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Yg0SUHT3N05ImcRRNb9G42355LdQDAPbxVUUnqcKe_s");
 }
 .dropdown {text-align:center;}
 .button, .dropdown-menu {margin:10px auto}
 .dropdown-menu {width:200px; left:50%; margin-left:-100px;}
+=======
+.dropdown {text-align:center;}
+.button, .dropdown-menu {margin:10px auto}
+.dropdown-menu {width:200px; left:50%; margin-left:-100px;}
+
+body{ background-image: url(https://i.pinimg.com/originals/da/dc/e9/dadce90550cfc17a01708d58db98a970.gif)
+
+}
+
+.character{}
+>>>>>>> fcfe4f7be619cded9253947074fdf5b523e597e6

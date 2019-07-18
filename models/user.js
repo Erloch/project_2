@@ -47,10 +47,15 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.ENUM('active', 'inactive'),
             defaultValue: 'active'
         }
- 
- 
     });
- 
-    return User;
- 
+        // User.associate = function(models) {
+        //   // Associating Author with Posts
+        //   // When an Author is deleted, also delete any associated Posts
+        //   User.hasOne(models.Character, {
+        //     // onDelete: "cascade"
+        //   });
+        // };
+      
+        return User;
+      
 }

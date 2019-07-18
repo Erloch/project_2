@@ -13,11 +13,15 @@ app.get("/api/character", function(req, res){
         res.json(dbCharacter);
     });
 });
-//     app.get("/api/character/:id", function (req, res){
-//     db.Character.findOne({}).then(function(dbCharacter){
-// res.json(dbCharacter);
-//     })
-// })
+    app.get("/api/character/:id", function (req, res){
+    db.Character.findOne({
+        where: {
+            id: req.params.id
+        },
+    }).then(function(dbCharacter){
+res.json(dbCharacter);
+    })
+})
 
 app.post("/api/character", function(req, res){
     console.log(req.body);
@@ -33,5 +37,6 @@ app.post("/api/character", function(req, res){
         res.json(dbCharacter);
     }) ;
 });
+
 };
 

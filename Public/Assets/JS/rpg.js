@@ -4,6 +4,9 @@
     // ===================================================================
   
     // Creating an object to hold our characters.
+  
+    
+
     
     var characters = {
       "Mario": {
@@ -328,15 +331,12 @@ $("#super-attack").on("click", function() {
   }
 });
 
+// function openWin() {
+//   window.open("../../homePg");
+// }
 
 
-
-    
-
-
-      
-
-
-
-
-  
+// $("#battle-button").on('click', function () {
+//   alert("it hit this")
+//   console.log("Link to page is working")
+// openWin()})

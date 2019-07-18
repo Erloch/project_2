@@ -95,10 +95,26 @@
         <div class="container">
                 <div class="row">
                   <div class="col text-center">
-                    <button class="btn btn-dark">Battle!</button>
+                    <button class="btn btn-dark" id = "battle-button">Battle!</button>
+                    <script>
+
+                        function openWin (){
+                            win.open("../../homePg.html")
+                        }
+                        $("#battle-button").on('click', function () {
+                         alert("it hit this")
+                        console.log("Link to page is working")
+                        openWin()})
+
+                        
+                    </script>
                   </div>
                 </div>
               </div>
+
+
+
+
     <div id="available-to-attack-section">
         <div class="section-title">Enemies Available To Attack</div>
         <div id="characters-section">

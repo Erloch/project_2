@@ -76,10 +76,6 @@
       var charDiv = $("<div class='character' data-name='" + character.name + "'>");
       var charName = $("<div class='character-name'>").text(character.name);
       var charImage = $("<img alt='image' class='character-image'>").attr("src", character.imageUrl);     
-    //   $(".tiptext").mouseover(function() {
-    //     $(this).children(".description").show();
-    // }).mouseout(function() {
-    //     $(this).children(".description").hide();
       var charHealth = $("<div class='character-health'>").text(character.health);
       charDiv.append(charName).append(charImage).append(charHealth);
       $(renderArea).append(charDiv);

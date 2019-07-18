@@ -75,11 +75,18 @@
       // This block of code builds the character card, and renders it to the page.
       var charDiv = $("<div class='character' data-name='" + character.name + "'>");
       var charName = $("<div class='character-name'>").text(character.name);
-      var charImage = $("<img alt='image' class='character-image'>").attr("src", character.imageUrl);
+      var charImage = $("<img alt='image' class='character-image'>").attr("src", character.imageUrl);     
+    //   $(".tiptext").mouseover(function() {
+    //     $(this).children(".description").show();
+    // }).mouseout(function() {
+    //     $(this).children(".description").hide();
       var charHealth = $("<div class='character-health'>").text(character.health);
       charDiv.append(charName).append(charImage).append(charHealth);
       $(renderArea).append(charDiv);
-    };
+
+
+    
+    }
   
     // this function will load all the characters into the character section to be selected
     var initializeGame = function() {

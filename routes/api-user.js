@@ -21,7 +21,7 @@ module.exports = function(app){
         }).then(function(dbUser){
           console.log(dbUser);
           if(!dbUser){
-              console.log(typeof process.env.SALT);
+              // console.log(typeof process.env.SALT);
               
             bCrypt.genSalt(parseInt(process.env.SALT), function(err,salt){
               bCrypt.hash(req.body.password, salt, function(err,hash){

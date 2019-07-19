@@ -21,10 +21,9 @@ $("#battle-button").on("click", function (event) {
 
         openWin();
     })
-    function openWin(){
-        window.open("/battlePg")
-    }
 });
+
+
 // function charCreat() {
 //     window.open("/new/character")
 // }
@@ -50,6 +49,7 @@ $("#submit").on("click", function(event){
         }
     })
 })
+
 
 
 

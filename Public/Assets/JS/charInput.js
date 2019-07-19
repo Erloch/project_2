@@ -21,10 +21,10 @@ $("#battle-button").on("click", function (event) {
 
         openWin();
     })
-    function openWin(){
-        window.open("/battlePg")
-    }
 });
+        function openWin(){
+            window.open("/battlePg")
+        }
 
 $("#submit").on("click", function(event){
     event.preventDeafault();
@@ -32,7 +32,15 @@ $("#submit").on("click", function(event){
         window.open("/new/character")
     }
     charCreat();
-})
+});
+
+$("#").on("click", function(event){
+    event.preventDeafault();
+    function charCreat() {
+        window.open("/new/character")
+    }
+    charCreat();
+});
 
 
 

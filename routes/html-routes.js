@@ -30,6 +30,11 @@ module.exports = function(app){
         res.sendFile(path.join(__dirname, "../public/newcharacter.html"));
     });
 
+    app.get("/api/player/signin", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/signIn.html"));
+    });
+
+
 //     //battle page route
 //     app.get("/battlePg", function(req, res){
 // res.sendFile(path.join(__dirname, "../public/battlePg.html"))

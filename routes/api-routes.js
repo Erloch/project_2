@@ -27,12 +27,11 @@ app.post("/api/character", function(req, res){
     console.log(req.body);
 
     db.Character.create({
-        charName: req.body.charName,
-        charI: req.body.charI,
-        charH: req.body.charH,
-        charD: req.body.charD,
-        charS: req.body.charS,
-        charX: req.body.charX
+        char: req.body.char,// link to character
+        charS:
+        wins: req.body.wins,
+        playerId: req.body.id,//foreign key
+        
     }).then(function(dbCharacter){
         res.json(dbCharacter);
     }) ;
@@ -40,3 +39,6 @@ app.post("/api/character", function(req, res){
 
 };
 
+// char: DataTypes.STRING,
+// wins: DataTypes.INTEGER,
+// playerId: DataTypes.INTEGER

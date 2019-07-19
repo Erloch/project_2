@@ -3,12 +3,12 @@ console.log("this is loaded")
 
 
 
-$("#submit").on("click", function (event) {
+$("#battle-button").on("click", function (event) {
     event.preventDefault();
     console.log("ive been clicked");
     var newChar = {
-        charName: $("#charName").val().trim(),
-        charH: parseInt($("#charH").val()),
+        char: $("#charSelect").val(),
+        wins: parseInt($("#wins").val()),
         charD: parseInt($("#charD").val()),
         charS: parseInt($("#charS").val())
     }

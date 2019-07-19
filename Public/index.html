@@ -13,21 +13,22 @@
         <body>
 <!--         
         <form>
-          <input type="button" value="Start the game, if you dare" onclick="openWin()">
+            
+              <input type="button" value="Start the game, if you dare" onclick="openWin()">
           <audio id="bflat" src="Assets/Sound/8bitsong.mp3"></audio>
         </form> -->
 
 <body>
-
-    <p> Micro BitBattle </p>
-<div><a href ="/api/character" alt="creator">Click here dummy</a></div>
+    <a href="/new/character">
+    <p> Start</p>
+<div><a href ="/api/character" alt="creator">Sign Up here</a></div>
     <div class = "creators">
         <p>
             Holt Galbraith, Rob Kowalski, Erich Bernhardt, Christopher Torres
     </p></div>
     <script>
       function openWin() {
-        window.open("/homePg");
+        window.open("/");
          var audio = document.getElementById('bflat')
          function playAudio(){
            audio.play();

@@ -1,16 +1,14 @@
 
 console.log("this is loaded")
 
-
-
 $("#battle-button").on("click", function (event) {
     event.preventDefault();
     console.log("ive been clicked");
     var newChar = {
-        char: $("#charSelect").val(),
+        char: $("#character-select").val(),
         wins: parseInt($("#wins").val()),
-        charD: parseInt($("#charD").val()),
-        charS: parseInt($("#charS").val())
+        charS: parseInt($("#charS").val()),
+        charD: parseInt($("#charD").val())
     }
     console.log(newChar)
 
@@ -20,7 +18,21 @@ $("#battle-button").on("click", function (event) {
         data: newChar
     }).then(function (res) {
         console.log(res, "Data Posted")
+
+        openWin();
     })
+    function openWin(){
+        window.open("/battlePg")
+    }
+});
+
+$("#submit").on("click", function(event){
+    event.preventDeafault();
+    function charCreat() {
+        window.open("/new/character")
+    }
+    charCreat();
 })
+
 
 

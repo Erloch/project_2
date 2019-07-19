@@ -28,9 +28,10 @@ app.post("/api/character", function(req, res){
 
     db.Character.create({
         char: req.body.char,// link to character
-        charS:
+        charS: req.body.charS,
+        charD: req.body.charD,
         wins: req.body.wins,
-        playerId: req.body.id,//foreign key
+        playerId: req.body.id//foreign key
         
     }).then(function(dbCharacter){
         res.json(dbCharacter);
@@ -39,6 +40,3 @@ app.post("/api/character", function(req, res){
 
 };
 
-// char: DataTypes.STRING,
-// wins: DataTypes.INTEGER,
-// playerId: DataTypes.INTEGER

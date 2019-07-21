@@ -49,12 +49,13 @@ module.exports = function(app){
                 res.json([{ message: "This Email has not yet been registered !"}])
              } else{
                 bCrypt.compare(req.body.password, playerinfo.password, function(err,response){
-                  if(err){
+                  console.log("This is response", response)
+                  if(err || response === false){
                     return(err)
                   }
+                  res.json("/new/character")
                 })
             //  res.json([{username:playerinfo.username, id:playerinfo.id}])
-            res.json("/new/character")
             }
         })
     })

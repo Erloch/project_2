@@ -72,7 +72,7 @@ $("#sign").on("click", function(event){
     }
     $.post("/api/player/signin", signinPlayer)
     .then(function(data){
-      console.log(data)
+      console.log("This is the data" ,data)
       if(data[0].message === "This Email has not yet been registered !"){
         alert("That was an incorrect login")
       } else{

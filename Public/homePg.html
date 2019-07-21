@@ -11,7 +11,7 @@
 	<!-- jQuery -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<!-- Game Logic -->
-
+	
 
 
 
@@ -52,11 +52,12 @@
 			<div class="attack buttons" style="text-align: center">
 
 				<button id="attack-button">
-					<audio id="attack-button2" src="Sound/swords.mp3"></audio>
+					<audio id="attack-button2" src="Assets/Sound/swords.mp3"></audio>
 					Attack</button>
 
-				<button id="super-attack">Super Random Attack!</button>
-				<audio id="laser-attack" src="Sound/laser.wav"></audio>
+				<button id = "super-attack">Super Random Attack!</button>
+				<audio id = "laser-attack" src = "Assets/Sound/laser.wav"></audio>
+			</div>
 			</div>
 		</div>
 
@@ -85,6 +86,7 @@
 	const opponent = localStorage.getItem('opponent');
 	document.getElementById('character-image').src = "./Assets/Images/" + character + ".gif";
 	document.getElementById('opponent-image').src = "./Assets/Images/" + opponent + ".gif";
+	
 </script>
-
+<script type = "text/javascript" src = "/Assets/JS/rpg.js"></script>
 </html>

@@ -22,7 +22,7 @@ $("#battle-button").on("click", function (event) {
         openWin();
     })
 });
-<<<<<<< HEAD
+
         function openWin(){
             window.open("/battlePg")
         }
@@ -42,7 +42,7 @@ $("#").on("click", function(event){
     }
     charCreat();
 });
-=======
+
 // function charCreat() {
 //     window.open("/new/character")
 // }
@@ -68,7 +68,5 @@ $("#submit").on("click", function(event){
         }
     })
 })
->>>>>>> 33d737e6392c3d96233163ace4f75ef132823d01
-
 
 

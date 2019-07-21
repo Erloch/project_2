@@ -22,6 +22,7 @@ $("#battle-button").on("click", function (event) {
         openWin();
     })
 });
+<<<<<<< HEAD
         function openWin(){
             window.open("/battlePg")
         }
@@ -41,6 +42,33 @@ $("#").on("click", function(event){
     }
     charCreat();
 });
+=======
+// function charCreat() {
+//     window.open("/new/character")
+// }
+
+$("#submit").on("click", function(event){
+    event.preventDefault();
+    var newPlayer = {
+        username: $("#userName").val().trim(),
+        email: $("#userEmail").val().trim(),
+        password: $("#password").val().trim(),
+    };
+    $.post("/api/player/signup", newPlayer)
+    .then(function(data){
+        console.log("Data is here" ,data[0].message)
+        console.log("Data is here" ,typeof(data[0].message))
+        if(data[0].message === "This email is already taken!"){
+            alert("That email is already taken!")
+        }else{
+            $("#userName").val("")
+            $("#userEmail").val("")
+            $("#password").val("")
+            window.open("/new/character")
+        }
+    })
+})
+>>>>>>> 33d737e6392c3d96233163ace4f75ef132823d01
 
 
 

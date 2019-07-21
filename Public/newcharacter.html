@@ -20,7 +20,7 @@
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <title>Document</title>
+    <title></title>
 </head>
 
 <body>
@@ -37,23 +37,6 @@
                 <option class="dropdown-item" value="pacman">Pacman</option>
             </select>
 
-
-            <!-- <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Select Character
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" id=#charname1 href="">Mario</a>
-            <a class="dropdown-item" id=#charname2 href="">Bowser</a>
-            <a class="dropdown-item" id=#charname3 href="#">Link</a>
-            <a class="dropdown-item" id=#charname4 href="#">Megaman</a>
-            <a class="dropdown-item" id=#charname5 href="#">Pikachu</a>
-            <a class="dropdown-item" id=#charname6 href="#">Charizard</a>
-            <a class="dropdown-item" id=#charname7 href="#">Pacman</a>
-        </div> -->
-
-
-            <!--<form class="container"></form>-->
             <h6>Enter Your Character Strength</h6>
             <div class="form-row justify-content-center">
                 <div class="form-group col-md-3">
@@ -62,7 +45,8 @@
                             <button class="btn btn-primary" type="submit" name="action" value="<"><span
                                     class="ti-arrow-circle-left"></span></button>
                         </div>
-                        <input class="form-control" type="text" size="2" name="listeanzahl" style="text-align:center">
+                        <input id="charS" class="form-control" type="text" size="2" name="listeanzahl"
+                            style="text-align:center">
                         <div class="input-group-append">
                             <button class="btn btn-primary" type="submit" name="action" value=">"><span
                                     class="ti-arrow-circle-right"></span></button>
@@ -71,7 +55,6 @@
                 </div>
             </div>
 
-            <!--<form class="container"></form>-->
             <h6>Enter Your Character Defense</h6>
             <div class="form-row justify-content-center">
                 <div class="form-group col-md-3">
@@ -80,7 +63,8 @@
                             <button class="btn btn-primary" type="submit" name="action" value="<"><span
                                     class="ti-arrow-circle-left"></span></button>
                         </div>
-                        <input class="form-control" type="text" size="2" name="listeanzahl" style="text-align:center">
+                        <input id="charD" class="form-control" type="text" size="2" name="listeanzahl"
+                            style="text-align:center">
                         <div class="input-group-append">
                             <button class="btn btn-primary" type="submit" name="action" value=">"><span
                                     class="ti-arrow-circle-right"></span></button>
@@ -88,6 +72,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         </div>
 
         <div class="dropdown">
@@ -101,20 +86,6 @@
                 <option class="dropdown-item" value="charizard">Charizard</option>
                 <option class="dropdown-item" value="pacman">Pacman</option>
             </select>
-            <!-- <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Select Opponent
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" id=#charname1 href="">Mario</a>
-            <a class="dropdown-item" id=#charname2 href="#">Bowser</a>
-            <a class="dropdown-item" id=#charname3 href="#">Link</a>
-            <a class="dropdown-item" id=#charname4 href="#">Megaman</a>
-            <a class="dropdown-item" id=#charname5 href="#">Pikachu</a>
-            <a class="dropdown-item" id=#charname6 href="#">Charizard</a>
-            <a class="dropdown-item" id=#charname7 href="#">Pacman</a>
-        </div>
-    </div> -->
 
             <div class="container">
                 <div class="row">
@@ -137,7 +108,7 @@
                     </div>
                     <div class="character" data-name="Bowser">
                         <div class="character-name">Bowser</div><img alt="image" class="character-image"
-                            src="Assets/Images/bowser.gif" width="100" height="80">
+                            src="/Assets/Images/bowser.gif" width="100" height="80">
                         <div class="character-health">100</div>
                     </div>
                     <div class="character" data-name="Link">
@@ -157,12 +128,14 @@
                     </div>
                     <div class="character" data-name="Pikachu">
                         <div class="character-name">Pikachu</div><img alt="image" class="character-image"
-                            src="Assets/Images/pikachu.gif" width="100" height="100">
+                            src="/Assets/Images/pikachu.gif" width="100" height="100">
                         <div class="character-health">100</div>
                     </div>
                     <div class="character" data-name="Charizard">
                         <div class="character-name">Charizard</div><img alt="image" class="character-image"
-                            src="/Assets/Images/charzard.gif" width="100" height="100">
+
+                            src="/Assets/Images/charizard.gif" width="100" height="100">
+
                         <div class="character-health">100</div>
                     </div>
                 </div>
@@ -170,7 +143,7 @@
         </div>
     </form>
 </body>
-
+<script type="text/javascript" src="/Assets/JS/charInput.js"></script>
 <script type="text/javascript" src="/Assets/JS/battle.js"></script>
 <script>
     const playersForm = document.getElementById('players-form');

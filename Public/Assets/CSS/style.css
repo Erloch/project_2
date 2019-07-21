@@ -7,7 +7,9 @@ body {
     color: white;
   }
   
-  
+  .clickText{
+    font-size:65px;
+  }
   img {
     width: 150px;
     height: 100px;

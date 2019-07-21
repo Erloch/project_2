@@ -27,9 +27,7 @@ app.post("/api/character", function(req, res){
     console.log(req.body);
 
     db.Character.create({
-        char: req.body.char,// link to character
-        charS: req.body.charS,
-        charD: req.body.charD,
+        
         wins: req.body.wins,
         playerId: req.body.id//foreign key
         

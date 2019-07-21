@@ -1,7 +1,11 @@
 
 // console.log("this is loaded")
 
+<<<<<<< HEAD
 // $("#battle-button").on("click", function (event) {
+=======
+// $("#-button").on("click", function (event) {
+>>>>>>> f05d9bb8b43995389346e62815fe942f28e2a9a7
 //     event.preventDefault();
 //     console.log("ive been clicked");
 //     var newChar = {
@@ -56,8 +60,9 @@ $("#submit").on("click", function(event){
     };
     $.post("/api/player/signup", newPlayer)
     .then(function(data){
-        console.log("Data is here" ,data[0])
-        if(data[0] === "This email is already taken!"){
+        console.log("data?",data)
+
+        if(data[0].message){
             alert("That email is already taken!")
         }else{
             $("#userName").val("")

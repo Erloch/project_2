@@ -67,4 +67,23 @@
 
 </body>
 
+<script>
+$("#sign").on("click", function(event){
+    event.preventDefault();
+    var signinPlayer = {
+        email: $("#charH").val().trim(),
+        password: $("#password").val().trim()
+    }
+    $.post("/api/player/signin", signinPlayer)
+    .then(function(data){
+      console.log("This is the data" ,data)
+      if(data[0].message === "This Email has not yet been registered !"){
+        alert("That was an incorrect login")
+      } else{
+        window.location.replace(data)
+      }
+    })
+})
+</script>
+
 </html>

@@ -26,6 +26,7 @@
 <body>
     <form id="players-form">
         <div class="dropdown">
+                <h2>The character you will Battle with!</h2>
             <select required onchange="saveSelectedCharacter(this)" id="character-select">
                 <option value="">Please Select a Character</option>
                 <option class="dropdown-item" data-health="50" value="mario">Mario</option>
@@ -37,6 +38,7 @@
                 <option class="dropdown-item" value="pacman">Pacman</option>
             </select>
 
+<!-- 
             <h6>Enter Your Character Strength</h6>
             <div class="form-row justify-content-center">
                 <div class="form-group col-md-3">
@@ -53,9 +55,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <h6>Enter Your Character Defense</h6>
+            <!-- <h6>Enter Your Character Defense</h6>
             <div class="form-row justify-content-center">
                 <div class="form-group col-md-3">
                     <div class="input-group mx-auto mb-3">
@@ -73,8 +75,8 @@
                 </div>
             </div>
         </div>
-        </div>
-
+        </div> -->
+        <h2>The character you will (hopefully) defeat!</h2>
         <div class="dropdown">
             <select required onchange="saveSelectedOpponent(this)" id="opponent-select">
                 <option value="">Please Select an Opponent</option>

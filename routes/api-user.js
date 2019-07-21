@@ -13,13 +13,13 @@ module.exports = function(app){
     })
 
     app.post("/api/player/signup", function(req,res){
-      console.log(req.body);
+      console.log("This is req.body" ,req.body.email);
         db.Player.findOne({
             where: {
                 email: req.body.email
             }
         }).then(function(dbUser){
-          console.log(dbUser);
+          console.log("This is dbUser", dbUser);
           if(!dbUser){
               // console.log(typeof process.env.SALT);
               
@@ -28,12 +28,13 @@ module.exports = function(app){
                 if(err) return (err);
                 req.body.password = hash
                 db.Player.create(req.body).then(function(dbUser){
-                  res.json(dbUser)
+                  res.json([{dbUser}])
                 })
               })
             })
           } else{
-            res.json([{ message: "This email is already taken!"}])
+            res.json([{ message: "Hello",
+          }])
           }
         })
     })

@@ -16,7 +16,7 @@ module.exports = function(app){
     });
     
     // battle page route
-    app.get("/batllePg", function(req, res) {
+    app.get("/homePg", function(req, res) {
         res.sendFile(path.join(__dirname, "../public/homePg.html"));
     });
     

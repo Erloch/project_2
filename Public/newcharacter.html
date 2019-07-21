@@ -149,6 +149,16 @@
         e.preventDefault();
         window.location.href = "/homePg";
     });
+
+    $.get("/api/user_data").then(function (data) {
+    // userData = data.id
+    console.log(data)
+    // if (userData) {
+    //   $("#user-name").text(" " + data.firstName)
+    // } else {
+    //   $("#user-name").text(" Player!")
+    // }
+  });
 </script>
 
 </html>

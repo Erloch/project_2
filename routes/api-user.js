@@ -52,8 +52,24 @@ module.exports = function(app){
                     return(err)
                   }
                 })
-             res.json([{username:playerinfo.username, id:playerinfo.id}])
+            //  res.json([{username:playerinfo.username, id:playerinfo.id}])
+            res.json("/new/character")
             }
         })
     })
+    app.get("/api/user_data", function (req, res) {
+      console.log("This is req", req.body)
+      if (!req.user) {
+        // The user is not logged in, send back an empty object
+        res.json({});
+      }
+      else {
+        // Otherwise send back the user's email and id
+        // Sending back a password, even a hashed password, isn't a good idea
+    res.json({
+      username: req.user.username,
+      id: req.user.id,
+    });
+  }
+});
 }

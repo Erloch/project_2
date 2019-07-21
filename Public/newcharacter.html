@@ -28,7 +28,7 @@
         <div class="dropdown">
             <select required onchange="saveSelectedCharacter(this)" id="character-select">
                 <option value="">Please Select a Character</option>
-                <option class="dropdown-item" value="mario">Mario</option>
+                <option class="dropdown-item" data-health="50" value="mario">Mario</option>
                 <option class="dropdown-item" value="bowser">Bowser</option>
                 <option class="dropdown-item" value="link">Link</option>
                 <option class="dropdown-item" value="megaman">Megaman</option>
@@ -133,7 +133,9 @@
                     </div>
                     <div class="character" data-name="Charizard">
                         <div class="character-name">Charizard</div><img alt="image" class="character-image"
+
                             src="/Assets/Images/charizard.gif" width="100" height="100">
+
                         <div class="character-health">100</div>
                     </div>
                 </div>

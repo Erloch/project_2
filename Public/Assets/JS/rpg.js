@@ -211,8 +211,8 @@
     // When you click the attack button, run the following game logic...
     $("#attack-button").on("click", function() {
       var exp_sound = document.getElementById("attack-button2")
-      
-      
+    
+       
       function playAudio() {
         exp_sound.play();
       }

@@ -184,7 +184,9 @@
       playAudio();
 
 
-     if (yourStats.name =true){
+
+       if (yourStats.name =true){
+
         // Creates messages for our attack and our opponents counter attack.
         var attackMessage = "You attacked " + oppStats.name + " for " + yourStats.attack * turnCounter + " damage.";
         var counterAttackMessage = oppStats.name + " attacked you back for " + oppStats.enemyAttackBack + " damage.";

@@ -13,13 +13,17 @@ module.exports = function(app){
     })
 
     app.post("/api/player/signup", function(req,res){
-      console.log(req.body);
+
+      console.log("This is req.body" ,req.body.email);
+
         db.Player.findOne({
             where: {
                 email: req.body.email
             }
         }).then(function(dbUser){
-          console.log(dbUser);
+
+          console.log("This is dbUser", dbUser);
+
           if(!dbUser){
               // console.log(typeof process.env.SALT);
               
@@ -28,17 +32,25 @@ module.exports = function(app){
                 if(err) return (err);
                 req.body.password = hash
                 db.Player.create(req.body).then(function(dbUser){
-                  res.json(dbUser)
+
+                  res.json([{dbUser}])
+
                 })
               })
             })
           } else{
-            res.json([{ message: "This email is already taken!"}])
+
+            res.json([{ message: "Hello",
+          }])
+
           }
         })
     })
 
     app.post("/api/player/signin", function(req,res){
+
+      console.log("req.body.id", req.body)
+
         db.Player.findOne({
             where:{
               email: req.body.email
@@ -48,12 +60,31 @@ module.exports = function(app){
                 res.json([{ message: "This Email has not yet been registered !"}])
              } else{
                 bCrypt.compare(req.body.password, playerinfo.password, function(err,response){
-                  if(err){
+
+                  console.log("This is response", response)
+                  if(err || response === false){
                     return(err)
                   }
+                  res.json("/new/character")
                 })
-             res.json([{username:playerinfo.username, id:playerinfo.id}])
+            //  res.json([{username:playerinfo.username, id:playerinfo.id}])
             }
         })
     })
+    app.get("/api/user_data", function (req, res) {
+      console.log("This is req", req.body)
+      if (!req.user) {
+        // The user is not logged in, send back an empty object
+        res.json({});
+      }
+      else {
+        // Otherwise send back the user's email and id
+        // Sending back a password, even a hashed password, isn't a good idea
+    res.json({
+      username: req.user.username,
+      id: req.user.id,
+    });
+  }
+});
+
 }

@@ -1,7 +1,10 @@
 
 console.log("this is loaded")
 
-// $("#battle-button").on("click", function (event) {
+
+
+// $("#-button").on("click", function (event) {
+
 //     event.preventDefault();
 //     console.log("ive been clicked");
 //     var newChar = {
@@ -37,9 +40,11 @@ $("#submit").on("click", function(event){
     };
     $.post("/api/player/signup", newPlayer)
     .then(function(data){
-        console.log("Data is here" ,data[0].message)
-        console.log("Data is here" ,typeof(data[0].message))
-        if(data[0].message === "This email is already taken!"){
+
+        console.log("data?",data)
+
+        if(data[0].message){
+
             alert("That email is already taken!")
         }else{
             $("#userName").val("")

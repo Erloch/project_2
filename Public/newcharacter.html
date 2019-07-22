@@ -26,6 +26,7 @@
 <body>
     <form id="players-form">
         <div class="dropdown">
+                <h2>The character you will Battle with!</h2>
             <select required onchange="saveSelectedCharacter(this)" id="character-select">
                 <option value="">Please Select a Character</option>
                 <option class="dropdown-item" data-health="50" value="mario">Mario</option>
@@ -37,10 +38,6 @@
                 <option class="dropdown-item" value="pacman">Pacman</option>
             </select>
 
-            
-                    
-    
-            
 
         <div class="dropdown">
             <select required onchange="saveSelectedOpponent(this)" id="opponent-select">
@@ -76,7 +73,9 @@
                     <div class="character" data-name="Bowser">
                         <div class="character-name">Bowser</div><img alt="image" class="character-image"
                             src="/Assets/Images/bowser.gif" width="100" height="80">
-                        <div class="character-health">Health: 100</div>
+
+                        <div class="character-health">100</div>
+
                     </div>
                     <div class="character" data-name="Link">
                         <div class="character-name">Link</div><img alt="image" class="character-image"
@@ -96,12 +95,14 @@
                     <div class="character" data-name="Pikachu">
                         <div class="character-name">Pikachu</div><img alt="image" class="character-image"
                             src="/Assets/Images/pikachu.gif" width="100" height="100">
+
                         <div class="character-health">Health: 100</div>
                     </div>
                     <div class="character" data-name="Charizard">
                         <div class="character-name">Charizard</div><img alt="image" class="character-image"
                             src="/Assets/Images/charizard.gif" width="100" height="100">
                         <div class="character-health">Health: 100</div>
+
                     </div>
                 </div>
             </div>
@@ -116,6 +117,16 @@
         e.preventDefault();
         window.location.href = "/homePg";
     });
+
+    $.get("/api/user_data").then(function (data) {
+    // userData = data.id
+    console.log(data)
+    // if (userData) {
+    //   $("#user-name").text(" " + data.firstName)
+    // } else {
+    //   $("#user-name").text(" Player!")
+    // }
+  });
 </script>
 
 </html>

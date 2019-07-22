@@ -1,0 +1,39 @@
+{
+ 
+    "development": {
+ 
+        "username": "root",
+ 
+        "password": "root",
+ 
+        "database": "character_db",
+ 
+        "host": "127.0.0.1",
+ 
+        "dialect": "mysql"
+ 
+    },
+ 
+    "test": {
+ 
+        "username": "",
+ 
+        "password": null,
+ 
+        "database": "",
+ 
+        "host": "",
+ 
+        "dialect": "mysql"
+ 
+    },
+ 
+    "production": {
+
+        "use_env_variable":"JAWS_DB_URL",
+ 
+        "dialect": "mysql"
+ 
+    }
+ 
+}

@@ -184,9 +184,7 @@
       playAudio();
 
 
-
-       if (yourStats.name =true){
-
+     if (yourStats.name =true){
         // Creates messages for our attack and our opponents counter attack.
         var attackMessage = "You attacked " + oppStats.name + " for " + yourStats.attack * turnCounter + " damage.";
         var counterAttackMessage = oppStats.name + " attacked you back for " + oppStats.enemyAttackBack + " damage.";
@@ -237,28 +235,29 @@
           // $("#opponent-select").empty();
   
           var gameStateMessage = "You have defeated " + oppStats.name + ", you can choose to fight another enemy.";
-          renderMessage(gameStateMessage);
+          renderMessage(gameStateMessage)
+          
 
 
 
           killCount++;
           renderMessage("Kill Count: " + killCount)
-          
-        
-
-      
-        }
-       
-
           var newButton = $("<button>")
           $("#new-fight-button").append(newButton)
           $("#new-fight-button").on("click", function () {
             window.location = "../../newcharacter.html"
           })
-          }
-        turnCounter++;
+          console.log("kill COunt")
+          turnCounter++;
+          
+        
 
-    })
+      
+        }
+          })
+        
+
+    
 
 
 ///  SUPER ATTACK BUTTON
@@ -326,15 +325,8 @@ $("#super-attack").on("click", function() {
     });
   
 
-<<<<<<< HEAD
-// $("#battle-button").on('click', function () {
-//   alert("it hit this")
-//   console.log("Link to page is working")
-// openWin(
-=======
   
     $("#super-attack").on("click", function() {
       $(this).prop("disabled", true);
       console.log("off switch")
     })
->>>>>>> 255368ad005021a9979bd5f9aff5adaba0b99e1c

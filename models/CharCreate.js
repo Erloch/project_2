@@ -7,15 +7,8 @@ module.exports = function(sequelize, DataTypes) {
     wins: {
       type: DataTypes.INTEGER,
       DEFAULTVALUE:  0,
-    },
-
-    charS: {
-      type: DataTypes.INTEGER
-    },
-
-    charD: {
-      type: DataTypes.INTEGER
     }
+    
   });
 
   Character.associate = function(models) {

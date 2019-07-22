@@ -1,5 +1,26 @@
 
 console.log("this is loaded")
+getPlayers();
+
+$("#battle-button").on("click", function (event) {
+    event.preventDefault();
+    console.log("ive been clicked");
+    var newChar = {
+        char: $("#character-select").val(),
+        wins: parseInt($("#wins").val()),
+    }
+    console.log(newChar)
+
+    $.ajax({
+        url: "/api/character",
+        type: "POST",
+        data: newChar
+    }).then(function (res) {
+        console.log(res, "Data Posted")
+    })
+});
+
+
 
 
 
@@ -54,7 +75,5 @@ $("#submit").on("click", function(event){
         }
     })
 })
-
-
 
 

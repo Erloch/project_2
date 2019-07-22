@@ -11,7 +11,7 @@ module.exports = function(app){
             res.json(dbUser)
         })
     })
-
+    
     app.post("/api/player/signup", function(req,res){
 
       console.log("This is req.body" ,req.body.email);
@@ -71,8 +71,8 @@ module.exports = function(app){
             }
         })
     })
-    app.get("/api/user_data", function (req, res) {
-      console.log("This is req", req.body)
+    app.get("/homePg", function (req, res) {
+      console.log("This is req")
       if (!req.user) {
         // The user is not logged in, send back an empty object
         res.json({});

@@ -29,7 +29,7 @@ module.exports = function(sequelize, Sequelize) {
         Player.associate = function(models) {
           
           Player.hasOne(models.Character, {
-            
+            onDelete: "cascade"
           });
         };
       

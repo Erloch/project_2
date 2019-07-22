@@ -40,6 +40,7 @@ module.exports = function(app){
     })
 
     app.post("/api/player/signin", function(req,res){
+      console.log("req.body.id", req.body)
         db.Player.findOne({
             where:{
               email: req.body.email

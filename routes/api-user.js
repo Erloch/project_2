@@ -13,13 +13,17 @@ module.exports = function(app){
     })
 
     app.post("/api/player/signup", function(req,res){
+
       console.log("This is req.body" ,req.body.email);
+
         db.Player.findOne({
             where: {
                 email: req.body.email
             }
         }).then(function(dbUser){
+
           console.log("This is dbUser", dbUser);
+
           if(!dbUser){
               // console.log(typeof process.env.SALT);
               
@@ -28,19 +32,25 @@ module.exports = function(app){
                 if(err) return (err);
                 req.body.password = hash
                 db.Player.create(req.body).then(function(dbUser){
+
                   res.json([{dbUser}])
+
                 })
               })
             })
           } else{
+
             res.json([{ message: "Hello",
           }])
+
           }
         })
     })
 
     app.post("/api/player/signin", function(req,res){
+
       console.log("req.body.id", req.body)
+
         db.Player.findOne({
             where:{
               email: req.body.email
@@ -50,6 +60,7 @@ module.exports = function(app){
                 res.json([{ message: "This Email has not yet been registered !"}])
              } else{
                 bCrypt.compare(req.body.password, playerinfo.password, function(err,response){
+
                   console.log("This is response", response)
                   if(err || response === false){
                     return(err)
@@ -75,4 +86,5 @@ module.exports = function(app){
     });
   }
 });
+
 }

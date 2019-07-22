@@ -1,7 +1,10 @@
 
 console.log("this is loaded")
 
+
+
 // $("#-button").on("click", function (event) {
+
 //     event.preventDefault();
 //     console.log("ive been clicked");
 //     var newChar = {
@@ -37,9 +40,11 @@ $("#submit").on("click", function(event){
     };
     $.post("/api/player/signup", newPlayer)
     .then(function(data){
+
         console.log("data?",data)
 
         if(data[0].message){
+
             alert("That email is already taken!")
         }else{
             $("#userName").val("")

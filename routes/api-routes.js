@@ -27,12 +27,12 @@ app.post("/api/character", function(req, res){
     console.log(req.body);
 
     db.Character.create({
-        charName: req.body.charName,
-        charI: req.body.charI,
-        charH: req.body.charH,
-        charD: req.body.charD,
+        char: req.body.char,// link to character
         charS: req.body.charS,
-        charX: req.body.charX
+        charD: req.body.charD,
+        wins: req.body.wins,
+        playerId: req.body.id//foreign key
+        
     }).then(function(dbCharacter){
         res.json(dbCharacter);
     }) ;

@@ -1,14 +1,16 @@
 
 console.log("this is loaded")
-getPlayers();
+// getPlayers();
 
 $("#battle-button").on("click", function (event) {
     event.preventDefault();
     console.log("ive been clicked");
     var newChar = {
         char: $("#character-select").val(),
-        wins: parseInt($("#wins").val()),
+        wins: 0,
+        PlayerId: 1
     }
+    window.open("/homePg")
     console.log(newChar)
 
     $.ajax({
@@ -16,7 +18,9 @@ $("#battle-button").on("click", function (event) {
         type: "POST",
         data: newChar
     }).then(function (res) {
+       
         console.log(res, "Data Posted")
+
     })
 });
 
